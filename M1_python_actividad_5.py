@@ -27,7 +27,7 @@ def registrar_estudiante():
     
     nombre = input("Ingrese el nombre del estudiante: ")
     if not nombre:
-        print("⚠ El nombre no puede estar vacío.")
+        print("El nombre no puede estar vacío.")
         return
 
     # Usamos un ID autoincremental
@@ -56,7 +56,7 @@ def consultar_estudiante():
     try:
         estudiante_id = int(input("Ingrese el ID del estudiante a consultar: "))
     except ValueError:
-        print("⚠ Por favor, ingrese un número válido.")
+        print("Por favor, ingrese un número válido.")
         return
     
     datos = datos_sistema["estudiantes"].get(estudiante_id)
@@ -67,7 +67,7 @@ def consultar_estudiante():
         # Lógica para mostrar materias y notas (se implementará más tarde)
         print("Materias inscritas: (Aún no implementado)")
     else:
-        print(f"⚠ Estudiante con ID {estudiante_id} no encontrado.")
+        print(f"Estudiante con ID {estudiante_id} no encontrado.")
 
 def eliminar_estudiante():
     """Elimina un estudiante por su ID."""
@@ -88,7 +88,7 @@ def eliminar_estudiante():
         
         print(f"Estudiante '{nombre_estudiante}' (ID: {estudiante_id}) y todos sus registros eliminados con éxito.")
     else:
-        print(f"⚠ Estudiante con ID {estudiante_id} no encontrado.")
+        print(f"Estudiante con ID {estudiante_id} no encontrado.")
 
 # Menú de Estudiantes
 
